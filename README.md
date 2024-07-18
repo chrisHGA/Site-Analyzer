@@ -41,7 +41,7 @@ Site Analyzer is a Python utility that generates comprehensive website analysis 
 
 4. Install dependencies:
    ```
-   pip install -r requirements.txt
+   pip install requests beautifulsoup4 pillow numpy scikit-learn
    ```
 
 ## Usage
@@ -96,19 +96,13 @@ Future improvements and features planned for Site Analyzer:
    - Extend the tool to analyze multiple pages of a website
    - Provide site-wide statistics and recommendations
 
-8. **Competitive Analysis**: 
-   - Add features to compare a website against competitors or industry benchmarks
-
-9. **Historical Tracking**: 
+8. **Historical Tracking**: 
    - Implement functionality to track changes in website metrics over time
 
-10. **API Integration**: 
-    - Develop an API for the tool to enable integration with other services
-
-11. **User Interface**: 
+9. **User Interface**: 
     - Create a web-based UI for easier use and result visualization
 
-12. **Customizable Reports**: 
+10. **Customizable Reports**: 
     - Allow users to select which metrics to include in the final report
 
 Remember to update this README as you implement new features or make significant changes to the project.
