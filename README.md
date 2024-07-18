@@ -20,7 +20,7 @@ Site Analyzer is a Python utility that generates comprehensive website analysis 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/site-analyzer.git
+   git clone https://github.com/chrisHGA/site-analyzer.git
    cd site-analyzer
    ```
 
@@ -41,7 +41,7 @@ Site Analyzer is a Python utility that generates comprehensive website analysis 
 
 4. Install dependencies:
    ```
-   pip install requests beautifulsoup4 pillow numpy scikit-learn
+   pip install requests beautifulsoup4 pillow numpy scikit-learn jinja2
    ```
 
 ## Usage
