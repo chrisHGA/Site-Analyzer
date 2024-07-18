@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hired Guns Website Check - {{ url }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Kayak Sans';
+            src: url('path/to/kayak-sans.woff2') format('woff2'),
+                 url('path/to/kayak-sans.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Exo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            font-family: 'Exo', sans-serif;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .overall-score {
+            font-family: 'Exo', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        .chart-group {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .chart-item {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .chart-description {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .info-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .info-item {
+            margin-bottom: 10px;
+        }
+        .yes {
+            color: green;
+            font-weight: bold;
+        }
+        .no {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hired Guns Website Check</h1>
+    
+    <h2>{{ url }}</h2>
+
+    <div class="overall-score">
+        Website Score: {{ (data['overall_score'] * 100)|round(2) }}%
+    </div>
+
+    <div class="chart-group">
+        <div class="chart-item">
+            {{ charts.responsiveness|safe }}
+            <p class="chart-description">How well it works on phones and computers</p>
+        </div>
+        <div class="chart-item">
+            {{ charts.seo|safe }}
+            <p class="chart-description">How easy it is to find online</p>
+        </div>
+        <div class="chart-item">
+            {{ charts.security|safe }}
+            <p class="chart-description">How well it keeps information safe</p>
+        </div>
+    </div>
+
+    <div class="chart-group">
+        <div class="chart-item">
+            {{ charts.accessibility|safe }}
+            <p class="chart-description">How easy it is for everyone to use</p>
+        </div>
+        <div class="chart-item">
+            {{ charts.visual_outdatedness|safe }}
+            <p class="chart-description">How new and fresh it looks</p>
+        </div>
+        <div class="chart-item">
+            {{ charts.performance|safe }}
+            <p class="chart-description">How fast it loads and works</p>
+        </div>
+    </div>
+    
+</body>
+</html>
